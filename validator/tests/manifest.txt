@@ -1,0 +1,31 @@
+valid_76-06.xlsx	partial	PASS	unchanged copy of case 76-06
+valid_76-29.xlsx	partial	PASS	unchanged copy of case 76-29
+valid_76-47.xlsx	partial	PASS	unchanged copy of case 76-47
+valid_76-48.xlsx	partial	PASS	unchanged copy of case 76-48
+broken_76-06_header.xlsx	partial	V1	crates header 'weight' renamed to 'weight_kg'
+broken_76-06_extra_sheet.xlsx	partial	V1	a 21st sheet 'notes' is added
+broken_76-06_weight.xlsx	partial	V2	crate 3 weighs 25 kg (range 1..20)
+broken_76-06_road_ref.xlsx	partial	V3	road 0 ends at a location that does not exist
+broken_76-06_disconnected.xlsx	partial	V4	all roads of one location re-routed, so it is cut off
+broken_76-06_waves_overlap.xlsx	partial	V4	wave 2 closes a road that wave 1 already closed
+broken_76-06_pattern_count.xlsx	partial	V5	count of pattern 1 increased by one
+broken_76-06_claim.xlsx	partial	V5	cargo_opt claim increased by one
+broken_76-06_edit_bound.xlsx	partial	V5	edit_bound set below the true edit distance
+broken_76-06_tour.xlsx	partial	V6	planted tour visits one site twice
+broken_76-06_cover.xlsx	partial	V6	one cover node swapped so an edge is uncovered
+broken_76-06_penalties.xlsx	partial	V7	flood penalties lowered: < 40% of locations have penalty >= 2
+broken_76-29_scenario.xlsx	partial	V1	scenario changed to 1 (case 29 is scenario 6)
+broken_76-29_window.xlsx	partial	V2	a window lasts 481 minutes
+broken_76-29_tick.xlsx	partial	V2	an alarm tick decreases
+broken_76-29_capacity.xlsx	partial	V2	capacity set to 80% of total crate weight
+broken_76-29_symbol.xlsx	partial	V2	lower-case 'a' inserted into the radio log
+broken_76-29_one_wave.xlsx	partial	V2	only one closure wave left
+broken_76-29_serial.xlsx	partial	V3	crate 2 repeats the serial of crate 1
+broken_76-29_rations.xlsx	partial	V6	an extra ration marked planted: sum != target
+broken_76-29_safety.xlsx	partial	V6	a planted switch flipped so a rule fails
+broken_76-29_expiry.xlsx	partial	V7	no crate expires by hour 300 (outbreak rule)
+broken_76-47_capacity60.xlsx	partial	V8	capacity 60: ratio greedy now exceeds 60% of optimum
+broken_76-47_11_crates.xlsx	partial	V8	only 11 crates (trap needs 12..60)
+broken_76-48_flat_minutes.xlsx	partial	V8	all roads 30 minutes: fewest-roads route is no longer dear
+full_49_cases.xlsx	full	V1	case 76-49 removed: only 49 cases
+full_duplicate_module.xlsx	full	V7	case 76-27 gets exactly the windows of case 76-21 (variety rule 4)

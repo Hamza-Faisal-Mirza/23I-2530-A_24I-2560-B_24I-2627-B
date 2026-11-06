@@ -1,0 +1,295 @@
+LIFELINE -- validation report -- group 76 (seed 76)
+generated 2026-11-06 22:07 by validator/make_report.py
+==============================================================================
+
+PART 1. Master workbook cases.xlsx (full mode: all 50 cases + cross-case rules)
+------------------------------------------------------------------------------
+LIFELINE validator -- cases.xlsx -- mode: full
+76-00 PASS
+76-01 PASS
+76-02 PASS
+76-03 PASS
+76-04 PASS
+76-05 PASS
+76-06 PASS
+76-07 PASS
+76-08 PASS
+76-09 PASS
+76-10 PASS
+76-11 PASS
+76-12 PASS
+76-13 PASS
+76-14 PASS
+76-15 PASS
+76-16 PASS
+76-17 PASS
+76-18 PASS
+76-19 PASS
+76-20 PASS
+76-21 PASS
+76-22 PASS
+76-23 PASS
+76-24 PASS
+76-25 PASS
+76-26 PASS
+76-27 PASS
+76-28 PASS
+76-29 PASS
+76-30 PASS
+76-31 PASS
+76-32 PASS
+76-33 PASS
+76-34 PASS
+76-35 PASS
+76-36 PASS
+76-37 PASS
+76-38 PASS
+76-39 PASS
+76-40 PASS
+76-41 PASS
+76-42 PASS
+76-43 PASS
+76-44 PASS
+76-45 PASS
+76-46 PASS
+76-47 PASS
+76-48 PASS
+76-49 PASS
+variety 1: ratio greedy not optimal in 15 tier-S cases (need >= 5)
+variety 2: fewest-roads routes all dearer for a target in 15 tier-S cases (need >= 5)
+variety 3: rules per switch below 3.5: 7, 3.5..4.8: 12, above 4.8: 7 (need >= 5, >= 8, >= 5)
+workbook-level checks (sheets, headers, types, ordering, cross-case rules): PASS
+RESULT: PASS (50/50 cases pass)
+
+PART 2. Test copies in validator/tests/ (see validator/tests/manifest.txt)
+------------------------------------------------------------------------------
+test copy                                    expected  validator  as expected
+valid_76-06.xlsx                             PASS      PASS       yes
+valid_76-29.xlsx                             PASS      PASS       yes
+valid_76-47.xlsx                             PASS      PASS       yes
+valid_76-48.xlsx                             PASS      PASS       yes
+broken_76-06_header.xlsx                     V1        REJECTED   yes
+broken_76-06_extra_sheet.xlsx                V1        REJECTED   yes
+broken_76-06_weight.xlsx                     V2        REJECTED   yes
+broken_76-06_road_ref.xlsx                   V3        REJECTED   yes
+broken_76-06_disconnected.xlsx               V4        REJECTED   yes
+broken_76-06_waves_overlap.xlsx              V4        REJECTED   yes
+broken_76-06_pattern_count.xlsx              V5        REJECTED   yes
+broken_76-06_claim.xlsx                      V5        REJECTED   yes
+broken_76-06_edit_bound.xlsx                 V5        REJECTED   yes
+broken_76-06_tour.xlsx                       V6        REJECTED   yes
+broken_76-06_cover.xlsx                      V6        REJECTED   yes
+broken_76-06_penalties.xlsx                  V7        REJECTED   yes
+broken_76-29_scenario.xlsx                   V1        REJECTED   yes
+broken_76-29_window.xlsx                     V2        REJECTED   yes
+broken_76-29_tick.xlsx                       V2        REJECTED   yes
+broken_76-29_capacity.xlsx                   V2        REJECTED   yes
+broken_76-29_symbol.xlsx                     V2        REJECTED   yes
+broken_76-29_one_wave.xlsx                   V2        REJECTED   yes
+broken_76-29_serial.xlsx                     V3        REJECTED   yes
+broken_76-29_rations.xlsx                    V6        REJECTED   yes
+broken_76-29_safety.xlsx                     V6        REJECTED   yes
+broken_76-29_expiry.xlsx                     V7        REJECTED   yes
+broken_76-47_capacity60.xlsx                 V8        REJECTED   yes
+broken_76-47_11_crates.xlsx                  V8        REJECTED   yes
+broken_76-48_flat_minutes.xlsx               V8        REJECTED   yes
+full_49_cases.xlsx                           V1        REJECTED   yes
+full_duplicate_module.xlsx                   V7        REJECTED   yes
+
+--- valid_76-06.xlsx: unchanged copy of case 76-06 (expected: PASS)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\valid_76-06.xlsx -- mode: partial
+76-06 PASS
+workbook-level checks (sheets, headers, types, ordering, cross-case rules): PASS
+RESULT: PASS (1/1 cases pass)
+
+--- valid_76-29.xlsx: unchanged copy of case 76-29 (expected: PASS)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\valid_76-29.xlsx -- mode: partial
+76-29 PASS
+workbook-level checks (sheets, headers, types, ordering, cross-case rules): PASS
+RESULT: PASS (1/1 cases pass)
+
+--- valid_76-47.xlsx: unchanged copy of case 76-47 (expected: PASS)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\valid_76-47.xlsx -- mode: partial
+76-47 PASS
+workbook-level checks (sheets, headers, types, ordering, cross-case rules): PASS
+RESULT: PASS (1/1 cases pass)
+
+--- valid_76-48.xlsx: unchanged copy of case 76-48 (expected: PASS)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\valid_76-48.xlsx -- mode: partial
+76-48 PASS
+workbook-level checks (sheets, headers, types, ordering, cross-case rules): PASS
+RESULT: PASS (1/1 cases pass)
+
+--- broken_76-06_header.xlsx: crates header 'weight' renamed to 'weight_kg' (expected: V1)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_header.xlsx -- mode: partial
+workbook-level problems:
+    [V1] sheet 'crates': header ['case_id', 'crate_id', 'cat', 'weight_kg', 'value', 'expiry', 'serial'] != ['case_id', 'crate_id', 'cat', 'weight', 'value', 'expiry', 'serial']
+RESULT: FAIL (1/1 cases pass)
+
+--- broken_76-06_extra_sheet.xlsx: a 21st sheet 'notes' is added (expected: V1)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_extra_sheet.xlsx -- mode: partial
+workbook-level problems:
+    [V1] sheets are ['cases', 'crates', 'locations', 'roads', 'waves', 'radio_log', 'radio_patterns', 'radio_reports', 'windows', 'incidents', 'sites', 'tour', 'pipeline_dims', 'drum_prices', 'sensor_edges', 'sensor_cover', 'safety_rules', 'safety_planted', 'rations', 'claims', 'notes']; expected exactly ['cases', 'crates', 'locations', 'roads', 'waves', 'radio_log', 'radio_patterns', 'radio_reports', 'windows', 'incidents', 'sites', 'tour', 'pipeline_dims', 'drum_prices', 'sensor_edges', 'sensor_cover', 'safety_rules', 'safety_planted', 'rations', 'claims']
+RESULT: FAIL (1/1 cases pass)
+
+--- broken_76-06_weight.xlsx: crate 3 weighs 25 kg (range 1..20) (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_weight.xlsx -- mode: partial
+76-06 FAIL
+    [V2] crates: weight not in 1..20 at crate_id: 3
+    [V5] claim cargo_opt = 290, recomputed optimum 268
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_road_ref.xlsx: road 0 ends at a location that does not exist (expected: V3)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_road_ref.xlsx -- mode: partial
+76-06 FAIL
+    [V3] roads: end point is not a location at road_no: 0
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_disconnected.xlsx: all roads of one location re-routed, so it is cut off (expected: V4)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_disconnected.xlsx -- mode: partial
+76-06 FAIL
+    [V4] network is not connected before closures (1 locations unreachable from HQ)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_waves_overlap.xlsx: wave 2 closes a road that wave 1 already closed (expected: V4)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_waves_overlap.xlsx -- mode: partial
+76-06 FAIL
+    [V4] waves: road closed twice (waves must be disjoint) at road_no: 5
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_pattern_count.xlsx: count of pattern 1 increased by one (expected: V5)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_pattern_count.xlsx -- mode: partial
+76-06 FAIL
+    [V5] pattern 1 count is 14, recomputed 13
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_claim.xlsx: cargo_opt claim increased by one (expected: V5)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_claim.xlsx -- mode: partial
+76-06 FAIL
+    [V5] claim cargo_opt = 291, recomputed optimum 290
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_edit_bound.xlsx: edit_bound set below the true edit distance (expected: V5)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_edit_bound.xlsx -- mode: partial
+76-06 FAIL
+    [V5] edit_bound 1 must lie in [true distance 2, len(a)+len(b) = 24]
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_tour.xlsx: planted tour visits one site twice (expected: V6)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_tour.xlsx -- mode: partial
+76-06 FAIL
+    [V6] planted tour is not a permutation of all sites starting at site 0
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_cover.xlsx: one cover node swapped so an edge is uncovered (expected: V6)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_cover.xlsx -- mode: partial
+76-06 FAIL
+    [V6] planted cover misses edge: (0, 6), (3, 6), (6, 8)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-06_penalties.xlsx: flood penalties lowered: < 40% of locations have penalty >= 2 (expected: V7)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-06_penalties.xlsx -- mode: partial
+76-06 FAIL
+    [V7] scenario 1: only 0/11 locations have penalty >= 2 (need 40%)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_scenario.xlsx: scenario changed to 1 (case 29 is scenario 6) (expected: V1)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_scenario.xlsx -- mode: partial
+76-29 FAIL
+    [V1] scenario 1 but case_no 29 is scenario 6
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_window.xlsx: a window lasts 481 minutes (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_window.xlsx -- mode: partial
+76-29 FAIL
+    [V2] windows: duration not in 5..480 at window_id: 2
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_tick.xlsx: an alarm tick decreases (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_tick.xlsx -- mode: partial
+76-29 FAIL
+    [V2] incidents: tick decreases at alarm at alarm_id: 12
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_capacity.xlsx: capacity set to 80% of total crate weight (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_capacity.xlsx -- mode: partial
+76-29 FAIL
+    [V2] capacity 464 is not 10%..70% of total weight 580 (and >= 1)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_symbol.xlsx: lower-case 'a' inserted into the radio log (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_symbol.xlsx -- mode: partial
+76-29 FAIL
+    [V2] radio_log uses symbols outside the 38-symbol alphabet: ['a']
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_one_wave.xlsx: only one closure wave left (expected: V2)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_one_wave.xlsx -- mode: partial
+76-29 FAIL
+    [V2] 1 closure waves, outside 2..5
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_serial.xlsx: crate 2 repeats the serial of crate 1 (expected: V3)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_serial.xlsx -- mode: partial
+76-29 FAIL
+    [V3] crates: repeated serial: 63166656
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_rations.xlsx: an extra ration marked planted: sum != target (expected: V6)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_rations.xlsx -- mode: partial
+76-29 FAIL
+    [V6] planted rations sum to 6534, but rations_target = 5573
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_safety.xlsx: a planted switch flipped so a rule fails (expected: V6)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_safety.xlsx -- mode: partial
+76-29 FAIL
+    [V6] planted assignment violates rule at rule_no: 2, 97
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-29_expiry.xlsx: no crate expires by hour 300 (outbreak rule) (expected: V7)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-29_expiry.xlsx -- mode: partial
+76-29 FAIL
+    [V7] scenario 6: only 0/59 crates expire by hour 300
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-47_capacity60.xlsx: capacity 60: ratio greedy now exceeds 60% of optimum (expected: V8)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-47_capacity60.xlsx -- mode: partial
+76-47 FAIL
+    [V8] trap 47: ratio greedy reaches 209 of optimum 296 (> 60%)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-47_11_crates.xlsx: only 11 crates (trap needs 12..60) (expected: V8)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-47_11_crates.xlsx -- mode: partial
+76-47 FAIL
+    [V2] number of crates = 11, outside 12..60 for tier X
+    [V8] trap 47: 11 crates (need 12..60)
+RESULT: FAIL (0/1 cases pass)
+
+--- broken_76-48_flat_minutes.xlsx: all roads 30 minutes: fewest-roads route is no longer dear (expected: V8)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\broken_76-48_flat_minutes.xlsx -- mode: partial
+76-48 FAIL
+    [V8] trap 48: no target whose fewest-roads routes all cost >= 1.5 x the cheapest route
+RESULT: FAIL (0/1 cases pass)
+
+--- full_49_cases.xlsx: case 76-49 removed: only 49 cases (expected: V1)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\full_49_cases.xlsx -- mode: full
+variety 1: ratio greedy not optimal in 15 tier-S cases (need >= 5)
+variety 2: fewest-roads routes all dearer for a target in 15 tier-S cases (need >= 5)
+variety 3: rules per switch below 3.5: 7, 3.5..4.8: 12, above 4.8: 7 (need >= 5, >= 8, >= 5)
+workbook-level problems:
+    [V1] 49 cases; exactly 50 are required
+    [V1] case_no values are not exactly 0..49
+RESULT: FAIL (49/49 cases pass)
+
+--- full_duplicate_module.xlsx: case 76-27 gets exactly the windows of case 76-21 (variety rule 4) (expected: V7)
+LIFELINE validator -- C:\Users\Hamza Faisal\Desktop\algo_proj\validator\tests\full_duplicate_module.xlsx -- mode: full
+variety 1: ratio greedy not optimal in 15 tier-S cases (need >= 5)
+variety 2: fewest-roads routes all dearer for a target in 15 tier-S cases (need >= 5)
+variety 3: rules per switch below 3.5: 7, 3.5..4.8: 12, above 4.8: 7 (need >= 5, >= 8, >= 5)
+workbook-level problems:
+    [V7] variety 4: cases 76-21 and 76-27 are equal in module windows
+RESULT: FAIL (50/50 cases pass)
+
+==============================================================================
+SUMMARY: master workbook PASS (50/50); 31/31 test copies behaved as expected (4 valid copies passed, 27 broken copies rejected with the expected rule)
